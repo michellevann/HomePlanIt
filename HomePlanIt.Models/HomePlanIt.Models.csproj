@@ -54,7 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DIYListItem.cs" />
+    <Compile Include="ItemListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoadblockListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

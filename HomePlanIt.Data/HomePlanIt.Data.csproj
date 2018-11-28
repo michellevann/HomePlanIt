@@ -56,11 +56,30 @@
   <ItemGroup>
     <Compile Include="DIY.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Migrations\201811281959150_InitialCreate.cs" />
+    <Compile Include="Migrations\201811281959150_InitialCreate.Designer.cs">
+      <DependentUpon>201811281959150_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811282239164_update.cs" />
+    <Compile Include="Migrations\201811282239164_update.Designer.cs">
+      <DependentUpon>201811282239164_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roadblock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811281959150_InitialCreate.resx">
+      <DependentUpon>201811281959150_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811282239164_update.resx">
+      <DependentUpon>201811282239164_update.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
