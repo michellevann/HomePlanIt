@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using HomePlanIt.WebMVC.Models;
+using HomePlanIt.Data;
 
 namespace HomePlanIt.WebMVC
 {
