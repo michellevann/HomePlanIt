@@ -16,5 +16,11 @@ namespace HomePlanIt.WebMVC.Controllers
             var model = new DIYListItem[0];
             return View(model);
         }
+
+        // GET
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
