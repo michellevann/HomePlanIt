@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace HomePlanIt.Models
 {
-    public class RoadblockListItem
+    public class RoadblockCreate
     {
-        [Display(Name="Roadblocker")]
+        [Required]
+        [Display(Name = "Roadblocker")]
         public string RoadblockName { get; set; }
 
         public string Plan { get; set; }
 
-        [Display(Name="Completed?")]
+        [Display(Name = "Completed?")]
         public bool IsComplete { get; set; }
 
         public override string ToString() => RoadblockName;

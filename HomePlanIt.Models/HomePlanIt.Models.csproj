@@ -54,7 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DIYCreate.cs" />
     <Compile Include="DIYListItem.cs" />
+    <Compile Include="RoadblockCreate.cs" />
+    <Compile Include="SupplyCreate.cs" />
     <Compile Include="SupplyListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoadblockListItem.cs" />

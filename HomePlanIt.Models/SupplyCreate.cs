@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace HomePlanIt.Models
 {
-    public class SupplyListItem
+    public class SupplyCreate
     {
-        [Display(Name="")]
+        [Display(Name = "")]
         public bool AlreadyHave { get; set; }
 
         public string Brand { get; set; }
@@ -19,11 +19,11 @@ namespace HomePlanIt.Models
         public int Quantity { get; set; }
 
         [Required]
-        [Display(Name="Item")]
+        [Display(Name = "Item")]
         public string SupplyName { get; set; }
 
         public decimal TotalCost { get; set; }
 
-        public override string ToString() => SupplyName;
+        public override string ToString() => SupplyName;  
     }
 }

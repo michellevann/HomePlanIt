@@ -270,6 +270,9 @@
     <Content Include="Views\Roadblock\Index.cshtml" />
     <Content Include="Views\DIY\Index.cshtml" />
     <Content Include="Views\Supply\Index.cshtml" />
+    <Content Include="Views\DIY\Create.cshtml" />
+    <Content Include="Views\Supply\Create.cshtml" />
+    <Content Include="Views\Roadblock\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
