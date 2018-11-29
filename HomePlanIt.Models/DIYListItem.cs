@@ -11,10 +11,23 @@ namespace HomePlanIt.Models
     {
         [Display(Name="Project Name")]
         public string ProjectName { get; set; }
+
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name="Start Date")]
         public DateTime StartDate { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Start Date")]
+        public DateTime EndDate { get; set; }
+
+        [Display(Name ="Budgeted Amount")]
+        public decimal BudgetedAmount { get; set; }
+
+        [Display(Name ="Final Cost")]
+        public decimal FinalCost { get; set; }
+
         public override string ToString()
         {
             return base.ToString();

@@ -56,7 +56,11 @@
   <ItemGroup>
     <Compile Include="DIY.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Item.cs" />
+    <Compile Include="Migrations\201811291619241_updatedClasses.cs" />
+    <Compile Include="Migrations\201811291619241_updatedClasses.Designer.cs">
+      <DependentUpon>201811291619241_updatedClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supply.cs" />
     <Compile Include="Migrations\201811281959150_InitialCreate.cs" />
     <Compile Include="Migrations\201811281959150_InitialCreate.Designer.cs">
       <DependentUpon>201811281959150_InitialCreate.cs</DependentUpon>
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811282239164_update.resx">
       <DependentUpon>201811282239164_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811291619241_updatedClasses.resx">
+      <DependentUpon>201811291619241_updatedClasses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

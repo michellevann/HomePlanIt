@@ -8,12 +8,12 @@ using System.Web.Mvc;
 namespace HomePlanIt.WebMVC.Controllers
 {
     [Authorize]
-    public class ItemController : Controller
+    public class SupplyController : Controller
     {
         // GET: Item
         public ActionResult Index()
         {
-            var model = new ItemListItem[0];
+            var model = new SupplyListItem[0];
             return View(model);
         }
     }

@@ -18,11 +18,13 @@ namespace HomePlanIt.Data
         [Required]
         public string ProjectName { get; set; }
 
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
-        public decimal TotalCost { get; set; }
+        public decimal BudgetedAmount { get; set; }
+
+        public decimal FinalCost { get; set; }
 
         public bool IsFinished { get; set; }
     }
