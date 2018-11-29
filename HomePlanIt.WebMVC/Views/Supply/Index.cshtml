@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Details of My DIY Projects</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,7 +12,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.AlreadyHave)
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Brand)
@@ -27,7 +30,10 @@
             @Html.DisplayNameFor(model => model.SupplyName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalCost)
+            @Html.DisplayNameFor(model => model.BudgetedAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalCost)
         </th>
         <th></th>
     </tr>
@@ -35,7 +41,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.AlreadyHave)
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Brand)
@@ -48,6 +57,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SupplyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BudgetedAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinalCost)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TotalCost)

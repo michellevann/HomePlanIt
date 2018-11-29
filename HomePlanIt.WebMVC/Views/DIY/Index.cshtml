@@ -4,29 +4,16 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>All of My DIY Projects</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("View Details", "Index", "Supply")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ProjectName)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BudgetedAmount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FinalCost)
-        </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -34,18 +21,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.ProjectName)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BudgetedAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FinalCost)
-        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |

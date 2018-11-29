@@ -26,6 +26,34 @@ namespace HomePlanIt.Models
         [Display(Name = "Budgeted Amount")]
         public decimal BudgetedAmount { get; set; }
 
-        public override string ToString() => ProjectName; 
+        [Display(Name = "")]
+        public bool AlreadyHave { get; set; }
+
+        public string Brand { get; set; }
+
+        public string Color { get; set; }
+
+        public int Quantity { get; set; }
+
+        [Required]
+        [Display(Name = "Item")]
+        public string SupplyName { get; set; }
+
+        public decimal TotalCost { get; set; }
+
+        public override string ToString() => SupplyName;
+
+        //public override string ToString() => ProjectName;
+
+        [Required]
+        [Display(Name = "Roadblocker")]
+        public string RoadblockName { get; set; }
+
+        public string Plan { get; set; }
+
+        [Display(Name = "Completed?")]
+        public bool IsComplete { get; set; }
+
+        //public override string ToString() => RoadblockName;
     }
 }
