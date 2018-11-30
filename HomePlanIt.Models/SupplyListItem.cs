@@ -25,15 +25,19 @@ namespace HomePlanIt.Models
         [Display(Name ="Total Cost")]
         public decimal TotalCost { get; set; }
 
+        public int ProjectId { get; set; }
+
+        public string ProjectName { get; set; }
+
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Start Date")]
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "End Date")]
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         [Display(Name = "Budgeted Amount")]
         public decimal BudgetedAmount { get; set; }

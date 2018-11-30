@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DIYCreate.cs" />
+    <Compile Include="DIYEdit.cs" />
     <Compile Include="DIYListItem.cs" />
     <Compile Include="RoadblockCreate.cs" />
     <Compile Include="SupplyCreate.cs" />

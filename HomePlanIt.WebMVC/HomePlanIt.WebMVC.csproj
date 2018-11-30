@@ -273,6 +273,7 @@
     <Content Include="Views\DIY\Create.cshtml" />
     <Content Include="Views\Supply\Create.cshtml" />
     <Content Include="Views\Roadblock\Create.cshtml" />
+    <Content Include="Views\DIY\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

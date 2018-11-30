@@ -58,5 +58,58 @@ namespace HomePlanIt.Services
                 return query.ToArray();
             }
         }
+        public SupplyListItem GetDIYById(int projectId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .DIYs
+                        .Single(e => e.ProjectId == projectId && e.OwnerId == _userId);
+                return
+                    new SupplyListItem
+                    {
+                        ProjectId = entity.ProjectId,
+                        ProjectName = entity.ProjectName,
+                        StartDate = entity.StartDate,
+                        EndDate = entity.EndDate,
+                        BudgetedAmount = entity.BudgetedAmount,
+                        FinalCost = entity.FinalCost
+                    };
+            }
+        }
+        public bool UpdateDIY (DIYEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .DIYs
+                        .Single(e => e.ProjectId == model.ProjectId && e.OwnerId == _userId);
+
+                entity.ProjectName = model.ProjectName;
+                entity.StartDate = model.StartDate;
+                entity.EndDate = model.EndDate;
+                entity.BudgetedAmount = model.BudgetedAmount;
+                entity.FinalCost = model.FinalCost;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteDIY(int projectId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .DIYs
+                        .Single(e => e.ProjectId == projectId && e.OwnerId == _userId);
+
+                ctx.DIYs.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+    
     }
 }
