@@ -26,6 +26,8 @@ namespace HomePlanIt.Models
         [Display(Name = "Budgeted Amount")]
         public decimal BudgetedAmount { get; set; }
 
+        public decimal FinalCost { get; set; }
+
         [Display(Name = "")]
         public bool AlreadyHave { get; set; }
 
