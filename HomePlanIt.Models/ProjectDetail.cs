@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomePlanIt.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace HomePlanIt.Models
 {
-    public class SupplyListItem
+    public class ProjectDetail
     {
+        public int SupplyId { get; set; }
+
         [Display(Name="")]
         public bool AlreadyHave { get; set; }
 
@@ -45,6 +48,10 @@ namespace HomePlanIt.Models
         [Display(Name = "Final Cost")]
         public decimal FinalCost { get; set; }
 
-        public override string ToString() => SupplyName;
+        public int DIYId { get; set; }
+
+        public virtual DIY DIY { get; set; }
+
+        public override string ToString() => $"[{SupplyId}] {SupplyName}";
     }
 }

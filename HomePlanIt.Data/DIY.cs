@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace HomePlanIt.Data
     public class DIY
     {
         [Key]
-        public int ProjectId { get; set; }
+        public int DIYId { get; set; }
 
         [Required]
         public Guid OwnerId { get; set; }
@@ -26,6 +27,7 @@ namespace HomePlanIt.Data
 
         public decimal FinalCost { get; set; }
 
+        [DefaultValue(false)]
         public bool IsFinished { get; set; }
     }
 }

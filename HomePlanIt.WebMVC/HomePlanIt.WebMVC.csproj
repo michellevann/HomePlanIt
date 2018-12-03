@@ -274,6 +274,9 @@
     <Content Include="Views\Supply\Create.cshtml" />
     <Content Include="Views\Roadblock\Create.cshtml" />
     <Content Include="Views\DIY\Edit.cshtml" />
+    <Content Include="Views\DIY\Delete.cshtml" />
+    <Content Include="Views\Supply\Edit.cshtml" />
+    <Content Include="Views\Supply\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

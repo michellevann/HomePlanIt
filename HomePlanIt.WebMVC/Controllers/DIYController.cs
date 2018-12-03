@@ -55,13 +55,6 @@ namespace HomePlanIt.WebMVC.Controllers
             return View(model);
         }
 
-        private DIYService CreateDIYService()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DIYService(userId);
-            return service;
-        }
-
         public ActionResult Edit(int id)
         {
             var service = CreateDIYService();
@@ -69,7 +62,7 @@ namespace HomePlanIt.WebMVC.Controllers
             var model =
                 new DIYEdit
                 {
-                    ProjectId = detail.ProjectId,
+                    DIYId = detail.ProjectId,
                     ProjectName = detail.ProjectName,
                     StartDate = detail.StartDate,
                     EndDate = detail.EndDate,
@@ -85,7 +78,7 @@ namespace HomePlanIt.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if(model.ProjectId != id)
+            if(model.DIYId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
@@ -124,6 +117,12 @@ namespace HomePlanIt.WebMVC.Controllers
             TempData["SaveResult"] = "Your project was deleted.";
 
             return RedirectToAction("Index");
+        }
+        private DIYService CreateDIYService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new DIYService(userId);
+            return service;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace HomePlanIt.Data
 {
@@ -6,6 +8,12 @@ namespace HomePlanIt.Data
     {
         [Key]
         public int SupplyId { get; set; }
+
+        [Required]
+        public Guid OwnerId { get; set; }
+
+        [Required]
+        public int DIYId { get; set; }
 
         public string Brand { get; set; }
 
@@ -16,11 +24,10 @@ namespace HomePlanIt.Data
         [Required]
         public string SupplyName { get; set; }
 
-        public decimal Cost { get; set; }
-        
-        public bool AlreadyHave { get; set; }
+        public decimal TotalCost { get; set; }
 
-        public int DIYId { get; set; }
+        [DefaultValue(false)]
+        public bool AlreadyHave { get; set; }
 
         public virtual DIY DIY { get; set; }
     }

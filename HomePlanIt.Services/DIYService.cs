@@ -58,18 +58,18 @@ namespace HomePlanIt.Services
                 return query.ToArray();
             }
         }
-        public SupplyListItem GetDIYById(int projectId)
+        public ProjectDetail GetDIYById(int diyId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .DIYs
-                        .Single(e => e.ProjectId == projectId && e.OwnerId == _userId);
+                        .Single(e => e.DIYId == diyId && e.OwnerId == _userId);
                 return
-                    new SupplyListItem
+                    new ProjectDetail
                     {
-                        ProjectId = entity.ProjectId,
+                        DIYId = entity.DIYId,
                         ProjectName = entity.ProjectName,
                         StartDate = entity.StartDate,
                         EndDate = entity.EndDate,
@@ -85,7 +85,7 @@ namespace HomePlanIt.Services
                 var entity =
                     ctx
                         .DIYs
-                        .Single(e => e.ProjectId == model.ProjectId && e.OwnerId == _userId);
+                        .Single(e => e.DIYId == model.DIYId && e.OwnerId == _userId);
 
                 entity.ProjectName = model.ProjectName;
                 entity.StartDate = model.StartDate;
@@ -96,14 +96,14 @@ namespace HomePlanIt.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteDIY(int projectId)
+        public bool DeleteDIY(int diyId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .DIYs
-                        .Single(e => e.ProjectId == projectId && e.OwnerId == _userId);
+                        .Single(e => e.DIYId == diyId && e.OwnerId == _userId);
 
                 ctx.DIYs.Remove(entity);
 
