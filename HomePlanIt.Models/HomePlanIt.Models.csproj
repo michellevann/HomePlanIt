@@ -59,6 +59,7 @@
     <Compile Include="DIYListItem.cs" />
     <Compile Include="RoadblockCreate.cs" />
     <Compile Include="RoadblockDetail.cs" />
+    <Compile Include="RoadblockEdit.cs" />
     <Compile Include="SupplyCreate.cs" />
     <Compile Include="ProjectDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

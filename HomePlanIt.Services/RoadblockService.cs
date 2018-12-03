@@ -75,5 +75,34 @@ namespace HomePlanIt.Services
                 };
             }
         }
+
+        public bool UpdateRoadblock(RoadblockEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Roadblocks
+                    .Single(e => e.RoadblockId == model.RoadblockId && e.OwnerId == _ownerId);
+
+                entity.RoadblockName = model.RoadblockName;
+                entity.IsComplete = model.IsComplete;
+                entity.Plan = model.Plan;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteSupply(int roadblockId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Roadblocks
+                    .Single(e => e.RoadblockId == roadblockId && e.OwnerId == _ownerId);
+                ctx.Roadblocks.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

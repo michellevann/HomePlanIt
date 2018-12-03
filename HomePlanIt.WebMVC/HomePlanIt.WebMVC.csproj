@@ -278,6 +278,8 @@
     <Content Include="Views\Supply\Edit.cshtml" />
     <Content Include="Views\Supply\Delete.cshtml" />
     <Content Include="Views\Roadblock\Details.cshtml" />
+    <Content Include="Views\Roadblock\Edit.cshtml" />
+    <Content Include="Views\Roadblock\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
