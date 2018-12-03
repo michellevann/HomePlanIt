@@ -56,6 +56,15 @@
   <ItemGroup>
     <Compile Include="DIY.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\201812031726345_InitialCreate.cs" />
+    <Compile Include="Migrations\201812031726345_InitialCreate.Designer.cs">
+      <DependentUpon>201812031726345_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812032014498_updated-table.cs" />
+    <Compile Include="Migrations\201812032014498_updated-table.Designer.cs">
+      <DependentUpon>201812032014498_updated-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Supply.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roadblock.cs" />
@@ -63,6 +72,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812031726345_InitialCreate.resx">
+      <DependentUpon>201812031726345_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812032014498_updated-table.resx">
+      <DependentUpon>201812032014498_updated-table.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

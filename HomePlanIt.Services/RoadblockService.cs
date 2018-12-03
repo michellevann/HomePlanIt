@@ -17,15 +17,15 @@ namespace HomePlanIt.Services
             _ownerId = ownerId;
         }
 
-        public bool CreateRoadblock(RoadblockCreate model)
+        public bool CreateRoadblock(DIYCreate model)
         {
             var entity = new Roadblock()
             {
+                    RoadblockId = model.RoadblockId,
                     OwnerId = _ownerId,
                     RoadblockName = model.RoadblockName,
                     IsComplete = model.IsComplete,
                     Plan = model.Plan,
-                    DIY = model.DIY,
                     DIYId = model.DIYId
             };
             using (var ctx = new ApplicationDbContext())
@@ -92,7 +92,7 @@ namespace HomePlanIt.Services
             }
         }
 
-        public bool DeleteSupply(int roadblockId)
+        public bool DeleteRoadblock(int roadblockId)
         {
             using (var ctx = new ApplicationDbContext())
             {

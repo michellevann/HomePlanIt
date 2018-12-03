@@ -9,7 +9,11 @@ namespace HomePlanIt.Models
 {
     public class DIYCreate
     {
-        [Required]
+        public int DIYId { get; set; }
+        public int SupplyId { get; set; }
+        public int RoadblockId { get; set; }
+
+        //[Required]
         [Display(Name = "Project Name")]
         public string ProjectName { get; set; }
 
@@ -28,7 +32,7 @@ namespace HomePlanIt.Models
 
         public decimal FinalCost { get; set; }
 
-        [Display(Name = "")]
+        //[Display(Name = "")]
         public bool AlreadyHave { get; set; }
 
         public string Brand { get; set; }
@@ -37,7 +41,7 @@ namespace HomePlanIt.Models
 
         public int Quantity { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Item")]
         public string SupplyName { get; set; }
 
@@ -47,7 +51,7 @@ namespace HomePlanIt.Models
 
         //public override string ToString() => ProjectName;
 
-        [Required]
+        //[Required]
         [Display(Name = "Roadblocker")]
         public string RoadblockName { get; set; }
 

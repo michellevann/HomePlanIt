@@ -22,14 +22,15 @@ namespace HomePlanIt.Services
             var entity =
                 new DIY()
                 {
+                    DIYId = model.DIYId,
                     OwnerId = _userId,
                     ProjectName = model.ProjectName,
                     StartDate = model.StartDate,
                     EndDate = model.EndDate,
                     BudgetedAmount = model.BudgetedAmount,
-                    FinalCost = model.FinalCost
+                    FinalCost = model.FinalCost,
                 };
-
+            
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.DIYs.Add(entity);

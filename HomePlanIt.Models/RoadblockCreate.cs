@@ -14,6 +14,8 @@ namespace HomePlanIt.Models
         [Display(Name = "Roadblocker")]
         public string RoadblockName { get; set; }
 
+        public int RoadblockId { get; set; }
+
         public string Plan { get; set; }
 
         [Display(Name = "Completed?")]

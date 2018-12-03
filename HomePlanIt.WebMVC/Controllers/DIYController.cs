@@ -36,13 +36,14 @@ namespace HomePlanIt.WebMVC.Controllers
             if (!ModelState.IsValid) return View(model);
            
             var service = CreateDIYService();
-
-            if (service.CreateDIY(model))
+            var serviceTwo = CreateRoadblockService();
+            service.CreateDIY(model);
+            if (serviceTwo.CreateRoadblock(model))
             {
                 TempData["SaveResult"] = "Your project was created.";
                 return RedirectToAction("Index");
-            };
-
+            }
+            
             ModelState.AddModelError("", "Project could not be created.");
             return View(model);
         }
@@ -122,6 +123,13 @@ namespace HomePlanIt.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new DIYService(userId);
+            return service;
+        }
+
+        private RoadblockService CreateRoadblockService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new RoadblockService(userId);
             return service;
         }
     }

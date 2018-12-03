@@ -29,7 +29,7 @@ namespace HomePlanIt.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(RoadblockCreate model)
+        public ActionResult Create(DIYCreate model)
         {
             if (!ModelState.IsValid) return View(model);
            

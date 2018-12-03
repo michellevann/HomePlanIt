@@ -9,10 +9,10 @@ namespace HomePlanIt.Data
         [Key]
         public int SupplyId { get; set; }
 
-        [Required]
+        //[Required]
         public Guid OwnerId { get; set; }
 
-        [Required]
+       // [Required]
         public int DIYId { get; set; }
 
         public string Brand { get; set; }
@@ -21,7 +21,7 @@ namespace HomePlanIt.Data
 
         public int Quantity { get; set; }
 
-        [Required]
+        //[Required]
         public string SupplyName { get; set; }
 
         public decimal TotalCost { get; set; }
