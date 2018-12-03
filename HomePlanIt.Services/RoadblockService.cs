@@ -56,5 +56,24 @@ namespace HomePlanIt.Services
                 return query.ToArray();
             }
         }
+
+        public RoadblockDetail GetRoadblockById(int roadblockId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Roadblocks
+                    .Single(e => e.RoadblockId == roadblockId && e.OwnerId == _ownerId);
+                return new RoadblockDetail
+                {
+                    RoadblockId = entity.RoadblockId,
+                    RoadblockName = entity.RoadblockName,
+                    IsComplete = entity.IsComplete,
+                    Plan = entity.Plan,
+                    DIY = entity.DIY,
+                    DIYId = entity.DIYId
+                };
+            }
+        }
     }
 }

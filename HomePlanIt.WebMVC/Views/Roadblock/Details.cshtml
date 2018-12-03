@@ -1,0 +1,58 @@
+﻿@model HomePlanIt.Models.RoadblockDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RoadblockDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIYId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIYId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoadblockName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoadblockName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsComplete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsComplete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RoadblockId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

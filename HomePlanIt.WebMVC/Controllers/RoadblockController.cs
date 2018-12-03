@@ -1,4 +1,6 @@
 ﻿using HomePlanIt.Models;
+using HomePlanIt.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,9 @@ namespace HomePlanIt.WebMVC.Controllers
         // GET: Roadblock
         public ActionResult Index()
         {
-            var model = new RoadblockListItem[0];
+            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new RoadblockService(ownerId);
+            var model = service.GetRoadblocks();
             return View(model);
         }
 
@@ -27,11 +31,33 @@ namespace HomePlanIt.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(RoadblockCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
+           
+            var service = CreateRoadblockService();
 
-            }
+            if (service.CreateRoadblock(model))
+            {
+                TempData["SaveResult"] = "Your roadblock was created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Roadblock could not be created.");
             return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateRoadblockService();
+            var model = svc.GetRoadblockById(id);
+
+            return View(model);
+        }
+
+        private RoadblockService CreateRoadblockService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new RoadblockService(userId);
+            return service;
         }
     }
 }

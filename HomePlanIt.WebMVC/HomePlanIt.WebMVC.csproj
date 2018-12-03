@@ -277,6 +277,7 @@
     <Content Include="Views\DIY\Delete.cshtml" />
     <Content Include="Views\Supply\Edit.cshtml" />
     <Content Include="Views\Supply\Delete.cshtml" />
+    <Content Include="Views\Roadblock\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
