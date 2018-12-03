@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201811291619241_updatedClasses.Designer.cs">
       <DependentUpon>201811291619241_updatedClasses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812030114596_updatedDatabase.cs" />
+    <Compile Include="Migrations\201812030114596_updatedDatabase.Designer.cs">
+      <DependentUpon>201812030114596_updatedDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Supply.cs" />
     <Compile Include="Migrations\201811281959150_InitialCreate.cs" />
     <Compile Include="Migrations\201811281959150_InitialCreate.Designer.cs">
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811291619241_updatedClasses.resx">
       <DependentUpon>201811291619241_updatedClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812030114596_updatedDatabase.resx">
+      <DependentUpon>201812030114596_updatedDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomePlanIt.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace HomePlanIt.Models
 {
     public class RoadblockListItem
     {
+        public int RoadblockId { get; set; }
+
         [Display(Name="Roadblocker")]
         public string RoadblockName { get; set; }
 
@@ -16,6 +19,10 @@ namespace HomePlanIt.Models
 
         [Display(Name="Completed?")]
         public bool IsComplete { get; set; }
+
+        public int DIYId { get; set; }
+
+        public virtual DIY DIY { get; set; }
 
         public override string ToString() => RoadblockName;
     }

@@ -86,7 +86,7 @@ namespace HomePlanIt.WebMVC.Controllers
 
             if (service.UpdateSupply(model))
             {
-                TempData["SaveResult"] = "Your supply was updated.");
+                TempData["SaveResult"] = ("Your supply was updated.");
                 return RedirectToAction("Index");
             }
 

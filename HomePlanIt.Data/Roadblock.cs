@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace HomePlanIt.Data
@@ -9,7 +10,7 @@ namespace HomePlanIt.Data
         public int RoadblockId { get; set; }
 
         [Required]
-        public int OwnerId { get; set; }
+        public Guid OwnerId { get; set; }
 
         [Required]
         public int DIYId { get; set; }
@@ -23,5 +24,6 @@ namespace HomePlanIt.Data
         public string Plan { get; set; }
 
         public virtual DIY DIY { get; set; }
+
     }
 }
