@@ -56,44 +56,13 @@
   <ItemGroup>
     <Compile Include="DIY.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201811291619241_updatedClasses.cs" />
-    <Compile Include="Migrations\201811291619241_updatedClasses.Designer.cs">
-      <DependentUpon>201811291619241_updatedClasses.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812030114596_updatedDatabase.cs" />
-    <Compile Include="Migrations\201812030114596_updatedDatabase.Designer.cs">
-      <DependentUpon>201812030114596_updatedDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Supply.cs" />
-    <Compile Include="Migrations\201811281959150_InitialCreate.cs" />
-    <Compile Include="Migrations\201811281959150_InitialCreate.Designer.cs">
-      <DependentUpon>201811281959150_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811282239164_update.cs" />
-    <Compile Include="Migrations\201811282239164_update.Designer.cs">
-      <DependentUpon>201811282239164_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roadblock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811281959150_InitialCreate.resx">
-      <DependentUpon>201811281959150_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811282239164_update.resx">
-      <DependentUpon>201811282239164_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811291619241_updatedClasses.resx">
-      <DependentUpon>201811291619241_updatedClasses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812030114596_updatedDatabase.resx">
-      <DependentUpon>201812030114596_updatedDatabase.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
