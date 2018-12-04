@@ -13,10 +13,10 @@ namespace HomePlanIt.Data
         [Key]
         public int DIYId { get; set; }
 
-        [Required]
+        //[Required]
         public Guid OwnerId { get; set; }
 
-        [Required]
+       // [Required]
         public string ProjectName { get; set; }
 
         public DateTime? StartDate { get; set; }

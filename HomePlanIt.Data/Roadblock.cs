@@ -22,8 +22,5 @@ namespace HomePlanIt.Data
         public bool IsComplete { get; set; }
 
         public string Plan { get; set; }
-
-        public virtual DIY DIY { get; set; }
-
     }
 }

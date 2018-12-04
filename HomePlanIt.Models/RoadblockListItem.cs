@@ -22,7 +22,7 @@ namespace HomePlanIt.Models
 
         public int DIYId { get; set; }
 
-        public virtual DIY DIY { get; set; }
+        //public virtual DIY DIY { get; set; }
 
         public override string ToString() => RoadblockName;
     }

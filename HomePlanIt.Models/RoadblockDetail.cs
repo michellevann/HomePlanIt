@@ -17,7 +17,7 @@ namespace HomePlanIt.Models
         [Required]
         public Guid OwnerId { get; set; }
 
-        [Required]
+        //[Required]
         public int DIYId { get; set; }
 
         [Required]
@@ -28,7 +28,7 @@ namespace HomePlanIt.Models
 
         public string Plan { get; set; }
 
-        public virtual DIY DIY { get; set; }
+        //public virtual DIY DIY { get; set; }
 
         public override string ToString() => $"[{RoadblockId}]{RoadblockName}";
     }

@@ -17,16 +17,15 @@ namespace HomePlanIt.Services
             _ownerId = ownerId;
         }
 
-        public bool CreateRoadblock(DIYCreate model)
+        public bool CreateRoadblock(RoadblockCreate model)
         {
             var entity = new Roadblock()
             {
-                    RoadblockId = model.RoadblockId,
                     OwnerId = _ownerId,
                     RoadblockName = model.RoadblockName,
                     IsComplete = model.IsComplete,
                     Plan = model.Plan,
-                    DIYId = model.DIYId
+                    //DIYId = model.DIYId
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -49,8 +48,7 @@ namespace HomePlanIt.Services
                             RoadblockName = e.RoadblockName,
                             IsComplete = e.IsComplete,
                             Plan = e.Plan,
-                            DIY = e.DIY,
-                            DIYId = e.DIYId
+                            //DIYId = e.DIYId
                         }
                         );
                 return query.ToArray();
@@ -70,8 +68,7 @@ namespace HomePlanIt.Services
                     RoadblockName = entity.RoadblockName,
                     IsComplete = entity.IsComplete,
                     Plan = entity.Plan,
-                    DIY = entity.DIY,
-                    DIYId = entity.DIYId
+                    //DIYId = entity.DIYId
                 };
             }
         }

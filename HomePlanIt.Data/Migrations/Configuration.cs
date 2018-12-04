@@ -10,7 +10,6 @@ namespace HomePlanIt.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "HomePlanIt.Data.ApplicationDbContext";
         }
 
         protected override void Seed(HomePlanIt.Data.ApplicationDbContext context)

@@ -14,16 +14,14 @@ namespace HomePlanIt.Models
         [Display(Name = "Roadblocker")]
         public string RoadblockName { get; set; }
 
-        public int RoadblockId { get; set; }
-
         public string Plan { get; set; }
 
         [Display(Name = "Completed?")]
         public bool IsComplete { get; set; }
 
-        public int DIYId { get; set; }
+        //public int DIYId { get; set; }
 
-        public virtual DIY DIY { get; set; }
+        //public virtual DIY DIY { get; set; }
 
         public override string ToString() => RoadblockName;
     }

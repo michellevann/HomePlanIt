@@ -7,13 +7,13 @@ namespace HomePlanIt.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class updatedtable : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updatedtable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812032014498_updated-table"; }
+            get { return "201812041432082_initial"; }
         }
         
         string IMigrationMetadata.Source

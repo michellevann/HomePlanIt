@@ -12,7 +12,7 @@ namespace HomePlanIt.Data
         //[Required]
         public Guid OwnerId { get; set; }
 
-       // [Required]
+        //[Required]
         public int DIYId { get; set; }
 
         public string Brand { get; set; }
@@ -28,8 +28,6 @@ namespace HomePlanIt.Data
 
         [DefaultValue(false)]
         public bool AlreadyHave { get; set; }
-
-        public virtual DIY DIY { get; set; }
     }
 
 }

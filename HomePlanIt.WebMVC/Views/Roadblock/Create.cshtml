@@ -49,9 +49,11 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div>
+        @Html.ActionLink("Back to Supplies", "Create", "Supply")
+        <br />
+        @Html.ActionLink("Back to Project", "Create", "DIY")
+    </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

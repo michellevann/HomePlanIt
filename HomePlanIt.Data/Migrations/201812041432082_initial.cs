@@ -3,7 +3,7 @@ namespace HomePlanIt.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
@@ -32,13 +32,11 @@ namespace HomePlanIt.Data.Migrations
                         Brand = c.String(),
                         Color = c.String(),
                         Quantity = c.Int(nullable: false),
-                        SupplyName = c.String(nullable: false),
+                        SupplyName = c.String(),
                         TotalCost = c.Decimal(nullable: false, precision: 18, scale: 2),
                         AlreadyHave = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => t.SupplyId)
-                .ForeignKey("dbo.DIY", t => t.DIYId, cascadeDelete: true)
-                .Index(t => t.DIYId);
+                .PrimaryKey(t => t.SupplyId);
             
             CreateTable(
                 "dbo.Roadblock",
@@ -47,13 +45,11 @@ namespace HomePlanIt.Data.Migrations
                         RoadblockId = c.Int(nullable: false, identity: true),
                         OwnerId = c.Guid(nullable: false),
                         DIYId = c.Int(nullable: false),
-                        RoadblockName = c.String(nullable: false),
+                        RoadblockName = c.String(),
                         IsComplete = c.Boolean(nullable: false),
                         Plan = c.String(),
                     })
-                .PrimaryKey(t => t.RoadblockId)
-                .ForeignKey("dbo.DIY", t => t.DIYId, cascadeDelete: true)
-                .Index(t => t.DIYId);
+                .PrimaryKey(t => t.RoadblockId);
             
             CreateTable(
                 "dbo.IdentityRole",
@@ -133,14 +129,10 @@ namespace HomePlanIt.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.Roadblock", "DIYId", "dbo.DIY");
-            DropForeignKey("dbo.Supply", "DIYId", "dbo.DIY");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropIndex("dbo.Roadblock", new[] { "DIYId" });
-            DropIndex("dbo.Supply", new[] { "DIYId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");

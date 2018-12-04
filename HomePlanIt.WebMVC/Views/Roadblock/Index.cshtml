@@ -9,6 +9,19 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<p>
+    @Html.ActionLink("CreateNew", "Create")
+</p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>
+}
 <table class="table">
     <tr>
         <th>
@@ -23,23 +36,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RoadblockName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Plan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsComplete)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.RoadblockId }) |
-            @Html.ActionLink("Details", "Details", new {  id=item.RoadblockId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RoadblockId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoadblockName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsComplete)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RoadblockId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RoadblockId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RoadblockId })
+            </td>
+        </tr>
+    }
 
 </table>

@@ -12,7 +12,7 @@ namespace HomePlanIt.Models
     {
         public int SupplyId { get; set; }
 
-        [Display(Name="")]
+        [Display(Name="Have?")]
         public bool AlreadyHave { get; set; }
 
         public string Brand { get; set; }
@@ -27,8 +27,6 @@ namespace HomePlanIt.Models
 
         [Display(Name ="Total Cost")]
         public decimal TotalCost { get; set; }
-
-        public int ProjectId { get; set; }
 
         public string ProjectName { get; set; }
 
@@ -50,7 +48,7 @@ namespace HomePlanIt.Models
 
         public int DIYId { get; set; }
 
-        public virtual DIY DIY { get; set; }
+        //public virtual DIY DIY { get; set; }
 
         public override string ToString() => $"[{SupplyId}] {SupplyName}";
     }

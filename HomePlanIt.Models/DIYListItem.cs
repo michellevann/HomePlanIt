@@ -9,6 +9,8 @@ namespace HomePlanIt.Models
 {
     public class DIYListItem
     {
+        public int DIYId { get; set; }
+
         [Display(Name="Project Name")]
         public string ProjectName { get; set; }
 
@@ -28,6 +30,7 @@ namespace HomePlanIt.Models
         [Display(Name ="Final Cost")]
         public decimal FinalCost { get; set; }
 
-        public override string ToString() => ProjectName;
+        public override string ToString() => $"[{DIYId}] {ProjectName}";
+
     }
 }

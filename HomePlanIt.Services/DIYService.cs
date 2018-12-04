@@ -22,13 +22,11 @@ namespace HomePlanIt.Services
             var entity =
                 new DIY()
                 {
-                    DIYId = model.DIYId,
                     OwnerId = _userId,
                     ProjectName = model.ProjectName,
                     StartDate = model.StartDate,
                     EndDate = model.EndDate,
                     BudgetedAmount = model.BudgetedAmount,
-                    FinalCost = model.FinalCost,
                 };
             
             using (var ctx = new ApplicationDbContext())
@@ -49,6 +47,7 @@ namespace HomePlanIt.Services
                             e =>
                                 new DIYListItem
                                 {
+                                    DIYId = e.DIYId,
                                     ProjectName = e.ProjectName,
                                     StartDate = e.StartDate,
                                     EndDate = e.EndDate,

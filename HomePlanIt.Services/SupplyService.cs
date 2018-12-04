@@ -22,8 +22,7 @@ namespace HomePlanIt.Services
             var entity = new Supply()
             {
                 OwnerId = _ownerId,
-                DIY = model.DIY,
-                DIYId = model.DIYId,
+                //DIYId = model.DIYId,
                 Brand = model.Brand,
                 Color = model.Color,
                 Quantity = model.Quantity,
@@ -50,9 +49,8 @@ namespace HomePlanIt.Services
                         new ProjectDetail
                         {
                             SupplyId = e.SupplyId,
+                            //DIYId = e.DIYId,
                             SupplyName = e.SupplyName,
-                            DIY = e.DIY,
-                            DIYId = e.DIYId,
                             Brand = e.Brand,
                             Color = e.Color,
                             Quantity = e.Quantity,
@@ -76,8 +74,7 @@ namespace HomePlanIt.Services
                         {
                             SupplyId = entity.SupplyId,
                             SupplyName = entity.SupplyName,
-                            DIY = entity.DIY,
-                            DIYId = entity.DIYId,
+                            //DIYId = entity.DIYId,
                             Brand = entity.Brand,
                             Color = entity.Color,
                             Quantity = entity.Quantity,
