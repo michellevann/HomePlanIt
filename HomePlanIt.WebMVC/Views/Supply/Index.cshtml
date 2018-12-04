@@ -71,27 +71,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FinalCost)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TotalCost)
-            </td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id=item.SupplyId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.SupplyId })
             </td>
         </tr>
     }
 </table>
 <div>
-    @Html.ActionLink("Add New Project", "Create")
+    @Html.ActionLink("Add New Project", "Create", "DIY")
 </div>
 <div>
-    @Html.ActionLink("Edit this Project", "Edit")
-</div>
-<div>
-    @Html.ActionLink("Delete this Project", "Delete")
-</div>
-<div>
-    @Html.ActionLink("See All Projects", "Index")
+    @Html.ActionLink("See All Projects", "Index", "DIY")
 </div>

@@ -7,9 +7,6 @@
 <h2>All of My DIY Projects</h2>
 
 <p>
-    @Html.ActionLink("View Details", "Index", "Supply")
-</p>
-<p>
     @Html.ActionLink("CreateNew", "Create")
 </p>
 
@@ -37,9 +34,9 @@
         </td>
 
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.DIYId }) |
+            @Html.ActionLink("Details", "ProjectDetail","Supply", new { id=item.DIYId }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.DIYId })
         </td>
     </tr>
 }
