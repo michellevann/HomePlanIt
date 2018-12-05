@@ -13,9 +13,6 @@ namespace HomePlanIt.Data
         public Guid OwnerId { get; set; }
 
         //[Required]
-        public int DIYId { get; set; }
-
-        //[Required]
         public string RoadblockName { get; set; }
 
         [DefaultValue(false)]

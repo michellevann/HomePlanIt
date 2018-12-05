@@ -19,10 +19,6 @@ namespace HomePlanIt.Models
         [Display(Name = "Completed?")]
         public bool IsComplete { get; set; }
 
-        //public int DIYId { get; set; }
-
-        //public virtual DIY DIY { get; set; }
-
         public override string ToString() => RoadblockName;
     }
 }

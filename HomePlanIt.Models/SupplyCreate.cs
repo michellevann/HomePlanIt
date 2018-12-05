@@ -10,8 +10,6 @@ namespace HomePlanIt.Models
 {
     public class SupplyCreate
     {
-        //public int DIYId { get; set; }
-
         [Display(Name = "Have?")]
         public bool AlreadyHave { get; set; }
 
@@ -26,8 +24,6 @@ namespace HomePlanIt.Models
         public string SupplyName { get; set; }
 
         public decimal TotalCost { get; set; }
-
-        //public virtual DIY DIY { get; set; }
 
         public override string ToString() => SupplyName;  
     }

@@ -8,25 +8,16 @@ using System.Threading.Tasks;
 
 namespace HomePlanIt.Models
 {
-    public class ProjectDetail
+    public class FullProjectDetail
     {
+        public int FullProjectId { get; set; }
+        public int DIYId { get; set; }
         public int SupplyId { get; set; }
+        public int RoadblockId { get; set; }
 
-        [Display(Name="Have?")]
-        public bool AlreadyHave { get; set; }
-
-        public string Brand { get; set; }
-
-        public string Color { get; set; }
-
-        public int Quantity { get; set; }
-
-        [Required]
-        [Display(Name="Item")]
-        public string SupplyName { get; set; }
-
-        [Display(Name ="Total Cost")]
-        public decimal TotalCost { get; set; }
+        public virtual DIY DIY { get; set; }
+        public virtual Supply Supply { get; set; }
+        public virtual Roadblock Roadblock { get; set; }
 
         public string ProjectName { get; set; }
 
@@ -46,10 +37,24 @@ namespace HomePlanIt.Models
         [Display(Name = "Final Cost")]
         public decimal FinalCost { get; set; }
 
-        public int DIYId { get; set; }
+        public string Brand { get; set; }
 
-        public virtual DIY DIY { get; set; }
+        public string Color { get; set; }
 
-        public override string ToString() => $"[{SupplyId}] {SupplyName}";
+        public int Quantity { get; set; }
+
+        [Required]
+        [Display(Name = "Item")]
+        public string SupplyName { get; set; }
+
+        [Display(Name = "Total Cost")]
+        public decimal TotalCost { get; set; }
+
+
+        [Display(Name = "Roadblocker")]
+        public string RoadblockName { get; set; }
+
+        public string Plan { get; set; }
+
     }
 }

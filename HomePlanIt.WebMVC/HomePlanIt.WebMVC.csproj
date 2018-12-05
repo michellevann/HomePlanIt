@@ -196,6 +196,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DIYController.cs" />
+    <Compile Include="Controllers\FullProjectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SupplyController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -280,6 +281,11 @@
     <Content Include="Views\Roadblock\Details.cshtml" />
     <Content Include="Views\Roadblock\Edit.cshtml" />
     <Content Include="Views\Roadblock\Delete.cshtml" />
+    <Content Include="Views\Supply\Details.cshtml" />
+    <Content Include="Views\FullProject\Index.cshtml" />
+    <Content Include="Views\FullProject\Create.cshtml" />
+    <Content Include="Views\FullProject\Details.cshtml" />
+    <Content Include="Views\FullProject\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

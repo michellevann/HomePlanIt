@@ -57,6 +57,9 @@
     <Compile Include="DIYCreate.cs" />
     <Compile Include="DIYEdit.cs" />
     <Compile Include="DIYListItem.cs" />
+    <Compile Include="FullProjectCreate.cs" />
+    <Compile Include="FullProjectDetail.cs" />
+    <Compile Include="FullProjectListItem.cs" />
     <Compile Include="RoadblockCreate.cs" />
     <Compile Include="RoadblockDetail.cs" />
     <Compile Include="RoadblockEdit.cs" />

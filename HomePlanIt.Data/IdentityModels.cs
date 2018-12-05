@@ -36,6 +36,7 @@ namespace HomePlanIt.Data
         public DbSet<DIY> DIYs { get; set; }
         public DbSet<Supply> Items { get; set; }
         public DbSet<Roadblock> Roadblocks { get; set; }
+        public DbSet<FullProject> FullProjects { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

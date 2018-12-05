@@ -12,12 +12,13 @@
 
 @if (TempData.ContainsKey("SaveResult"))
 {
-    <div class="alert alert-success fade in" role="alert">
-        @ViewBag.SaveResult
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-    </div>
+<div class="alert alert-success fade in" role="alert">
+    @ViewBag.SaveResult
+    <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+    </button>
+    @TempData["SaveResult"]
+</div>
 }
 
 <table class="table">
@@ -35,7 +36,7 @@
 
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.DIYId }) |
-            @Html.ActionLink("Details", "ProjectDetail","Supply", new { id=item.DIYId }) |
+            @Html.ActionLink("Details", "Details", new { controller = "Supply" }, new { id=item.DIYId }) |
             @Html.ActionLink("Delete", "Delete", new {  id=item.DIYId })
         </td>
     </tr>

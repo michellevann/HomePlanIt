@@ -25,7 +25,6 @@ namespace HomePlanIt.Services
                     RoadblockName = model.RoadblockName,
                     IsComplete = model.IsComplete,
                     Plan = model.Plan,
-                    //DIYId = model.DIYId
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -48,7 +47,6 @@ namespace HomePlanIt.Services
                             RoadblockName = e.RoadblockName,
                             IsComplete = e.IsComplete,
                             Plan = e.Plan,
-                            //DIYId = e.DIYId
                         }
                         );
                 return query.ToArray();
@@ -68,7 +66,6 @@ namespace HomePlanIt.Services
                     RoadblockName = entity.RoadblockName,
                     IsComplete = entity.IsComplete,
                     Plan = entity.Plan,
-                    //DIYId = entity.DIYId
                 };
             }
         }

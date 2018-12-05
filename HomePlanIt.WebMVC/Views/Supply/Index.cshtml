@@ -4,25 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Details of My DIY Projects</h2>
+<h2>My Supplies List</h2>
 
 @if (TempData.ContainsKey("SaveResult"))
 {
-    <div class="alert alert-success fade in" role="alert">
-        @ViewBag.SaveResult
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-    </div>
+<div class="alert alert-success fade in" role="alert">
+    @ViewBag.SaveResult
+    <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+    </button>
+    @TempData["SaveResult"]
+</div>
 }
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndDate)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Brand)
         </th>
@@ -36,10 +31,7 @@
             @Html.DisplayNameFor(model => model.SupplyName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BudgetedAmount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FinalCost)
+            @Html.DisplayNameFor(model => model.TotalCost)
         </th>
         <th></th>
     </tr>
@@ -47,12 +39,6 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Brand)
             </td>
@@ -66,10 +52,7 @@
                 @Html.DisplayFor(modelItem => item.SupplyName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BudgetedAmount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FinalCost)
+                @Html.DisplayFor(modelItem => item.TotalCost)
             </td>
 
             <td>

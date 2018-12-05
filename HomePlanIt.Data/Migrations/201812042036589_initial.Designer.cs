@@ -13,7 +13,7 @@ namespace HomePlanIt.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201812041432082_initial"; }
+            get { return "201812042036589_initial"; }
         }
         
         string IMigrationMetadata.Source

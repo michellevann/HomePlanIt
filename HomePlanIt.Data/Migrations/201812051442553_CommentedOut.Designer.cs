@@ -7,13 +7,13 @@ namespace HomePlanIt.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class CT : IMigrationMetadata
+    public sealed partial class CommentedOut : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CT));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CommentedOut));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812041747569_CT"; }
+            get { return "201812051442553_CommentedOut"; }
         }
         
         string IMigrationMetadata.Source

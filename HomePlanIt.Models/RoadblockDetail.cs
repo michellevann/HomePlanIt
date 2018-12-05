@@ -28,7 +28,7 @@ namespace HomePlanIt.Models
 
         public string Plan { get; set; }
 
-        //public virtual DIY DIY { get; set; }
+        public virtual DIY DIY { get; set; }
 
         public override string ToString() => $"[{RoadblockId}]{RoadblockName}";
     }

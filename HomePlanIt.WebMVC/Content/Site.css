@@ -27,7 +27,16 @@ textarea {
     border:none;
     background-color: white;
 }
+
+.leftsidecontainer{
+    height: 100%;
+}
+
 #leftside {
     background: url(https://images.pexels.com/photos/53987/tool-work-bench-hammer-pliers-53987.jpeg?cs=srgb&dl=blur-close-up-colors-53987.jpg&fm=jpg)
-    
+}
+
+#rightside {
+    height: inherit;
+    background: url(https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?cs=srgb&dl=blueprint-designing-diagram-834892.jpg&fm=jpg)
 }

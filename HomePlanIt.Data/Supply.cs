@@ -12,9 +12,6 @@ namespace HomePlanIt.Data
         //[Required]
         public Guid OwnerId { get; set; }
 
-        //[Required]
-        public int DIYId { get; set; }
-
         public string Brand { get; set; }
 
         public string Color { get; set; }

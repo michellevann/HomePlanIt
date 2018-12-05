@@ -55,18 +55,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DIY.cs" />
+    <Compile Include="FullProject.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201812041432082_initial.cs" />
-    <Compile Include="Migrations\201812041432082_initial.Designer.cs">
-      <DependentUpon>201812041432082_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201812042036589_initial.cs" />
+    <Compile Include="Migrations\201812042036589_initial.Designer.cs">
+      <DependentUpon>201812042036589_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812041632397_changedTables.cs" />
-    <Compile Include="Migrations\201812041632397_changedTables.Designer.cs">
-      <DependentUpon>201812041632397_changedTables.cs</DependentUpon>
+    <Compile Include="Migrations\201812051435562_checkingForRequired.cs" />
+    <Compile Include="Migrations\201812051435562_checkingForRequired.Designer.cs">
+      <DependentUpon>201812051435562_checkingForRequired.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812041747569_CT.cs" />
-    <Compile Include="Migrations\201812041747569_CT.Designer.cs">
-      <DependentUpon>201812041747569_CT.cs</DependentUpon>
+    <Compile Include="Migrations\201812051442553_CommentedOut.cs" />
+    <Compile Include="Migrations\201812051442553_CommentedOut.Designer.cs">
+      <DependentUpon>201812051442553_CommentedOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051455149_DeleteDIYId.cs" />
+    <Compile Include="Migrations\201812051455149_DeleteDIYId.Designer.cs">
+      <DependentUpon>201812051455149_DeleteDIYId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051800156_addedTable.cs" />
+    <Compile Include="Migrations\201812051800156_addedTable.Designer.cs">
+      <DependentUpon>201812051800156_addedTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Supply.cs" />
@@ -78,14 +87,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812041432082_initial.resx">
-      <DependentUpon>201812041432082_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812042036589_initial.resx">
+      <DependentUpon>201812042036589_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041632397_changedTables.resx">
-      <DependentUpon>201812041632397_changedTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812051435562_checkingForRequired.resx">
+      <DependentUpon>201812051435562_checkingForRequired.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041747569_CT.resx">
-      <DependentUpon>201812041747569_CT.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812051442553_CommentedOut.resx">
+      <DependentUpon>201812051442553_CommentedOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051455149_DeleteDIYId.resx">
+      <DependentUpon>201812051455149_DeleteDIYId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051800156_addedTable.resx">
+      <DependentUpon>201812051800156_addedTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
