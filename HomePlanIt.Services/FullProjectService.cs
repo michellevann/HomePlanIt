@@ -22,7 +22,7 @@ namespace HomePlanIt.Services
             var entity = new FullProject()
             {
                 OwnerId = _userId,
-                FullProjectId = model.FullProjectId,
+                //FullProjectId = model.FullProjectId,
                 DIYId = model.DIYId,
                 SupplyId = model.SupplyId,
                 RoadblockId = model.RoadblockId
@@ -66,18 +66,19 @@ namespace HomePlanIt.Services
                 {
                     FullProjectId = entity.FullProjectId,
                     DIYId = entity.DIYId,
+                    SupplyId = entity.SupplyId,
+                    RoadblockId = entity.RoadblockId,
                     ProjectName = entity.DIY.ProjectName,
                     StartDate = entity.DIY.StartDate,
                     EndDate = entity.DIY.EndDate,
                     BudgetedAmount = entity.DIY.BudgetedAmount,
                     FinalCost = entity.DIY.FinalCost,
-                    SupplyId = entity.SupplyId,
                     Brand = entity.Supply.Brand,
                     Color = entity.Supply.Color,
                     Quantity = entity.Supply.Quantity,
                     SupplyName = entity.Supply.SupplyName,
                     TotalCost = entity.Supply.TotalCost,
-                    RoadblockId = entity.RoadblockId,
+                    RoadblockName = entity.Roadblock.RoadblockName,
                     Plan = entity.Roadblock.Plan
                 };
             }

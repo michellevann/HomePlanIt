@@ -38,7 +38,7 @@ namespace HomePlanIt.WebMVC.Controllers
             if (service.CreateRoadblock(model))
             {
                 TempData["SaveResult"] = "Your roadblock was created.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "FullProject");
             };
 
             ModelState.AddModelError("", "Roadblock could not be created.");

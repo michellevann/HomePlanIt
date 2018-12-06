@@ -21,9 +21,17 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("DIY", "Create", "DIY")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Create<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("DIY", "Create","DIY")</li>
+                            <li>@Html.ActionLink("Supply List", "Create", "Supply")</li>
+                            <li>@Html.ActionLink("Roadblocks List", "Create", "Roadblock")</li>
+                            <li>@Html.ActionLink("Full Project", "Create", "FullProject")</li>
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("Contractor", "About", "Home")</li>
-                    <li>@Html.ActionLink("Records", "Index", "DIY")</li>
+                    <li>@Html.ActionLink("Records", "Details", "FullProject")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

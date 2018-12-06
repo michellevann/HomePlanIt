@@ -38,7 +38,7 @@ namespace HomePlanIt.WebMVC.Controllers
             if (service.CreateSupply(model))
             {
                 TempData["SaveResult"] = "Your item was created.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Create", "Roadblock");
             };
 
             ModelState.AddModelError("", "Item could not be created.");
@@ -48,6 +48,7 @@ namespace HomePlanIt.WebMVC.Controllers
         public ActionResult Details(int id)
         {
             var svc = CreateSupplyService();
+
             var model = svc.GetItemById(id);
 
             return View(model);

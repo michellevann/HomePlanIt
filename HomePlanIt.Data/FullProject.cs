@@ -12,11 +12,12 @@ namespace HomePlanIt.Data
         [Key]
         public int FullProjectId { get; set; }
         public Guid OwnerId { get; set; }
-        public virtual DIY DIY { get; set; }
         public int DIYId { get; set; }
-        public virtual Supply Supply { get; set; }
         public int SupplyId { get; set; }
-        public virtual Roadblock Roadblock { get; set; }
         public int RoadblockId { get; set; }
+
+        public virtual DIY DIY { get; set; }
+        public virtual Supply Supply { get; set; }
+        public virtual Roadblock Roadblock { get; set; }
     }
 }

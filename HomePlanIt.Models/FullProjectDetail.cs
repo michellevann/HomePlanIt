@@ -15,10 +15,6 @@ namespace HomePlanIt.Models
         public int SupplyId { get; set; }
         public int RoadblockId { get; set; }
 
-        public virtual DIY DIY { get; set; }
-        public virtual Supply Supply { get; set; }
-        public virtual Roadblock Roadblock { get; set; }
-
         public string ProjectName { get; set; }
 
         [DataType(DataType.Date)]
@@ -50,11 +46,9 @@ namespace HomePlanIt.Models
         [Display(Name = "Total Cost")]
         public decimal TotalCost { get; set; }
 
-
         [Display(Name = "Roadblocker")]
         public string RoadblockName { get; set; }
 
         public string Plan { get; set; }
-
     }
 }

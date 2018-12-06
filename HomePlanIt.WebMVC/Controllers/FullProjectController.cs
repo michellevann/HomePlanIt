@@ -18,14 +18,36 @@ namespace HomePlanIt.WebMVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new FullProjectService(userId);
             var model = service.GetFullProjects();
-
             return View(model);
         }
 
         //GET
         public ActionResult Create()
         {
+            var diyService = CreateDIYService();
+            var supplyService = CreateSupplyService();
+            var roadblockService = CreateRoadblockService();
+
+            ViewBag.DIYId = new SelectList(diyService.GetDIYs(), "DIYId", "ProjectName");
+            ViewBag.SupplyId = new SelectList(supplyService.GetItems(), "SupplyId", "SupplyName");
+            ViewBag.RoadblockId = new SelectList(roadblockService.GetRoadblocks(), "RoadblockId", "RoadblockName");
+            
             return View();
+        }
+
+        private DIYService CreateDIYService()
+        {
+            return new DIYService(Guid.Parse(User.Identity.GetUserId()));
+        }
+
+        private SupplyService CreateSupplyService()
+        {
+            return new SupplyService(Guid.Parse(User.Identity.GetUserId()));
+        }
+
+        private RoadblockService CreateRoadblockService()
+        {
+            return new RoadblockService(Guid.Parse(User.Identity.GetUserId()));
         }
 
         [HttpPost]

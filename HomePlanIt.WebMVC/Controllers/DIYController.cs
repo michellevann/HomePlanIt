@@ -39,7 +39,7 @@ namespace HomePlanIt.WebMVC.Controllers
             if (service.CreateDIY(model))
             {
                 TempData["SaveResult"] = "Your project was created.";
-                return RedirectToAction("Create");
+                return RedirectToAction("Create","Supply");
             }
             
             ModelState.AddModelError("", "Project could not be created.");
