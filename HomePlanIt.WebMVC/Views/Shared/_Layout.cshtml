@@ -6,32 +6,31 @@
     <title>@ViewBag.Title - Home PlanIt</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home","Index","Home")</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Create<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li>@Html.ActionLink("DIY", "Create","DIY")</li>
-                            <li>@Html.ActionLink("Supply List", "Create", "Supply")</li>
+                            <li>@Html.ActionLink("DIY Project", "Create", "DIY")</li>
+                            <li>@Html.ActionLink("Supplies List", "Create", "Supply")</li>
                             <li>@Html.ActionLink("Roadblocks List", "Create", "Roadblock")</li>
                             <li>@Html.ActionLink("Full Project", "Create", "FullProject")</li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("Contractor", "About", "Home")</li>
-                    <li>@Html.ActionLink("Records", "Details", "FullProject")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Records<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("DIY Project", "Create", "DIY")</li>
+                            <li>@Html.ActionLink("Supplies List", "Create", "Supply")</li>
+                            <li>@Html.ActionLink("Roadblocks List", "Create", "Roadblock")</li>
+                            <li>@Html.ActionLink("Full Project", "Create", "FullProject")</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

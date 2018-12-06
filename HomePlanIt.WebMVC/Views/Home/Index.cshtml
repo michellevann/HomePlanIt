@@ -1,20 +1,19 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="jumbotron">
-    <h1>Home PlanIt</h1>
-    <p class="lead">What type of project do you want to do?</p>
-</div>
-
-<div class="row">
-    <div class="leftsidecontainer">
-        <div class="col-md-6" id="leftside">
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">DIY &raquo;</a></p>
+<div class="header">
+    <div class="row">
+        <div class="col-md-4" id="projectButton">
+            <h2>DIY Projects</h2>
+            <span><a class="btn btn-default" id="diyProject" href="@Url.Action("Create","DIY")"></a></span>
         </div>
-    </div>
-    
-    <div class="col-md-6" id="rightside">
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Contractor &raquo;</a></p>
+        <div class="col-md-4" id="projectButton">
+            <h2>Supplies</h2>
+            <span><a class="btn btn-default" id="supplies" href="@Url.Action("Create","Supply")"></a></span>
+        </div>
+        <div class="col-md-4" id="projectButton">
+            <h2>Roadblocks</h2>
+            <span><a class="btn btn-default" id="roadblocks" href="@Url.Action("Create","Roadblock")"></a></span>
+        </div>
     </div>
 </div>
